@@ -7,7 +7,7 @@ const testimonials = [
     name: "Annette Black",
     company: "Sony",
     avatar: "/images/avatars/annette-black.png",
-    type: "large-teal",
+    type: "large-primary",
   },
   {
     quote:
@@ -59,7 +59,15 @@ const testimonials = [
   },
 ]
 
-const TestimonialCard = ({ quote, name, company, avatar, type }) => {
+interface TestimonialCardProps {
+  quote: string
+  name: string
+  company: string
+  avatar: string
+  type: string
+}
+
+const TestimonialCard = ({ quote, name, company, avatar, type }: TestimonialCardProps) => {
   const isLargeCard = type.startsWith("large")
   const avatarSize = isLargeCard ? 48 : 36
   const avatarBorderRadius = isLargeCard ? "rounded-[41px]" : "rounded-[30.75px]"
@@ -73,7 +81,7 @@ const TestimonialCard = ({ quote, name, company, avatar, type }) => {
   let cardHeight = ""
   const cardWidth = "w-full md:w-[384px]"
 
-  if (type === "large-teal") {
+  if (type === "large-primary") {
     cardClasses += " bg-primary"
     quoteClasses += " text-primary-foreground text-2xl font-medium leading-8"
     nameClasses += " text-primary-foreground text-base font-normal leading-6"
