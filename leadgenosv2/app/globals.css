@@ -1,61 +1,145 @@
+/*
+ * Node AI Brand - Design System
+ * Dark theme with warm neutral tones
+ */
+
+/* Font Imports */
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* LeadGen Design System: True Warm Monochrome */
-    /* Constraint: NO color tints - only warm grays, brightness, and form */
+    /* ===================
+       BACKGROUND LAYERS
+       =================== */
+    --background: 30 8% 4%;           /* #0D0D0C - Base background */
+    --foreground: 50 8% 95%;          /* #F5F5F0 - Primary text */
 
-    --radius: 0.5rem;
+    --card: 30 6% 10%;                /* #1A1918 - Card surfaces */
+    --card-foreground: 50 8% 95%;
 
-    /* Dark mode only - warm monochrome */
-    --background: 40 8% 4%;           /* #0a0a09 - Very dark warm gray */
-    --foreground: 60 33% 95%;         /* #f7f5f0 - Warm off-white */
+    --popover: 35 5% 13%;             /* #242321 - Elevated surfaces */
+    --popover-foreground: 50 8% 95%;
 
-    --card: 40 7% 10%;                /* #1a1917 - Dark warm gray */
-    --card-foreground: 60 33% 95%;    /* #f7f5f0 - Warm off-white */
+    --surface-elevated: 35 5% 13%;    /* Same as popover */
 
-    --popover: 40 7% 10%;
-    --popover-foreground: 60 33% 95%;
+    /* ===================
+       INTERACTIVE COLORS
+       =================== */
+    --primary: 40 5% 88%;             /* #E8E4DD - Primary actions */
+    --primary-foreground: 30 8% 4%;
+    --primary-dark: 40 4% 80%;        /* Darker variant */
+    --primary-light: 40 10% 95%;      /* Lighter variant */
 
-    --primary: 60 33% 95%;            /* #f7f5f0 - Warm white (primary buttons) */
-    --primary-foreground: 40 8% 4%;   /* #0a0a09 - Very dark (text on primary) */
-    --primary-dark: 40 6% 85%;        /* #d9d7d4 - Slightly darker gray */
-    --primary-light: 60 20% 98%;      /* #fbfaf9 - Nearly white */
+    --secondary: 30 6% 10%;           /* Subtle backgrounds */
+    --secondary-foreground: 45 6% 64%;
 
-    --secondary: 40 6% 14%;           /* #262522 - Medium-dark warm gray */
-    --secondary-foreground: 60 33% 95%;
+    --muted: 35 4% 16%;               /* Disabled/muted backgrounds */
+    --muted-foreground: 45 6% 64%;    /* #A8A69F - Secondary text */
 
-    --muted: 40 6% 14%;               /* #262522 - Medium-dark warm gray */
-    --muted-foreground: 47 7% 64%;    /* #a8a59c - Medium warm gray */
-    --muted-foreground-light: 47 7% 64% / 0.7;
-    --muted-foreground-dark: 47 7% 64% / 0.6;
+    --accent: 35 5% 13%;              /* Hover states */
+    --accent-foreground: 50 8% 95%;
 
-    --accent: 40 6% 14%;              /* #262522 */
-    --accent-foreground: 60 33% 95%;
+    --destructive: 40 3% 35%;         /* Error/danger (muted red) */
+    --destructive-foreground: 50 8% 95%;
 
-    --destructive: 0 0% 40%;
-    --destructive-foreground: 60 33% 95%;
+    /* ===================
+       BORDERS & FOCUS
+       =================== */
+    --border: 35 4% 17%;              /* #2E2D2B - Default borders */
+    --border-light: 35 4% 17% / 0.08;
+    --border-dark: 35 4% 17% / 0.15;
+    --input: 35 4% 17%;               /* Input borders */
+    --ring: 40 5% 70%;                /* Focus ring */
+    --radius: 0.5rem;                 /* Default border radius */
 
-    --border: 40 5% 17%;              /* #2d2b28 - Subtle warm border */
-    --border-light: 40 5% 17% / 0.08;
-    --border-dark: 40 5% 17% / 0.15;
+    /* ===================
+       TEXT HIERARCHY
+       =================== */
+    --text-primary: 50 8% 95%;        /* Main text */
+    --text-secondary: 45 6% 64%;      /* Secondary/muted text */
+    --text-disabled: 40 4% 40%;       /* Disabled text */
 
-    --input: 40 5% 17%;
-    --ring: 60 33% 95%;               /* #f7f5f0 - Focus ring */
+    /* ===================
+       STATUS COLORS
+       (Monochromatic variants)
+       =================== */
+    --status-success: 45 4% 77%;
+    --status-warning: 40 4% 52%;
+    --status-error: 40 3% 35%;
+    --status-info: 45 4% 61%;
 
-    /* Extended Warm Monochrome Palette */
-    --surface: 40 7% 10%;             /* #1a1917 - Card surfaces */
-    --surface-elevated: 40 6% 14%;    /* #262522 - Elevated surfaces */
-    --text-secondary: 47 7% 64%;      /* #a8a59c - Secondary text */
-    --text-disabled: 45 5% 40%;       /* #6b6862 - Disabled text */
-    --interactive-hover: 38 23% 89%;  /* #e9e5dc - Hover state */
-    --interactive-active: 39 18% 80%; /* #ccc8be - Active state */
+    /* ===================
+       SIDEBAR
+       =================== */
+    --sidebar-background: 30 6% 7%;
+    --sidebar-foreground: 45 6% 64%;
+    --sidebar-primary: 50 8% 95%;
+    --sidebar-primary-foreground: 30 8% 4%;
+    --sidebar-accent: 35 4% 12%;
+    --sidebar-accent-foreground: 50 8% 95%;
+    --sidebar-border: 35 4% 14%;
+    --sidebar-ring: 40 5% 70%;
+
+    /* ===================
+       TYPOGRAPHY
+       =================== */
+    --font-sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    /* Font sizes */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+
+    /* Font weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* ===================
+       SPACING
+       =================== */
+    --space-0: 0;
+    --space-1: 0.25rem;    /* 4px */
+    --space-2: 0.5rem;     /* 8px */
+    --space-3: 0.75rem;    /* 12px */
+    --space-4: 1rem;       /* 16px */
+    --space-5: 1.25rem;    /* 20px */
+    --space-6: 1.5rem;     /* 24px */
+    --space-8: 2rem;       /* 32px */
+    --space-10: 2.5rem;    /* 40px */
+    --space-12: 3rem;      /* 48px */
+    --space-16: 4rem;      /* 64px */
+
+    /* Border radius */
+    --radius-sm: calc(var(--radius) - 4px);   /* 4px */
+    --radius-md: calc(var(--radius) - 2px);   /* 6px */
+    --radius-lg: var(--radius);               /* 8px */
+    --radius-xl: 0.75rem;                     /* 12px */
+    --radius-2xl: 1rem;                       /* 16px */
+    --radius-full: 9999px;                    /* Pill shape */
+
+    /* Touch targets */
+    --touch-target-min: 44px;
 
     /* Atmospheric Effects */
-    --glow-primary: 60 33% 95%;
-    --glow-ambient: 40 10% 20%;
+    --glow-primary: 50 8% 95%;
+    --glow-ambient: 35 5% 20%;
   }
 }
 
@@ -63,16 +147,186 @@
   * {
     @apply border-border;
   }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
-  /* Atmospheric Glow Effects */
+  /* ===================
+     GHOST BUTTONS
+     =================== */
+  .btn-ghost {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: var(--font-medium);
+    background-color: transparent;
+    transition: all 200ms ease;
+    cursor: pointer;
+    min-height: var(--touch-target-min);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-ghost:active {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0.97);
+    transition: transform 50ms ease-in;
+  }
+
+  .btn-ghost:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2),
+                0 0 0 4px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-ghost:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Small variant */
+  .btn-ghost-sm {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-sm);
+    min-height: 36px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: var(--font-medium);
+    background-color: transparent;
+    transition: all 200ms ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn-ghost-sm:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-ghost-sm:active {
+    transform: scale(0.97);
+  }
+
+  /* Active state */
+  .btn-ghost-active {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* ===================
+     GLASSMORPHISM CARDS
+     =================== */
+  .card-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    transition: all 200ms ease;
+  }
+
+  .card-glass:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  /* Dark card variant */
+  .card-dark {
+    background-color: #0f0f0f;
+    border: 1px solid #333333;
+    border-radius: var(--radius-xl);
+  }
+
+  /* ===================
+     GHOST INPUTS
+     =================== */
+  .input-ghost {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background-color: transparent;
+    transition: all 200ms ease;
+    font-size: 16px;
+    min-height: var(--touch-target-min);
+  }
+
+  .input-ghost::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .input-ghost:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .input-ghost-rect {
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background-color: transparent;
+    transition: all 200ms ease;
+    font-size: 16px;
+    min-height: var(--touch-target-min);
+  }
+
+  .input-ghost-rect::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .input-ghost-rect:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  /* ===================
+     MODALS
+     =================== */
+  .modal-container {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+  }
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+  }
+
+  /* ===================
+     ATMOSPHERIC GLOW
+     =================== */
   .glow-ambient {
     box-shadow: 0 0 80px 40px hsl(var(--glow-ambient) / 0.3);
   }
@@ -85,23 +339,19 @@
     box-shadow: 0 0 40px 10px hsl(var(--glow-ambient) / 0.2);
   }
 
-  /* Interactive States */
-  .interactive-surface {
-    @apply bg-card transition-all duration-200;
+  /* ===================
+     TEXT UTILITIES
+     =================== */
+  .text-muted {
+    color: rgba(255, 255, 255, 0.6);
   }
 
-  .interactive-surface:hover {
-    background-color: hsl(var(--surface-elevated));
+  .text-disabled {
+    color: rgba(255, 255, 255, 0.4);
   }
 
-  /* Selection Ring */
-  .selection-ring {
-    @apply ring-2 ring-foreground ring-offset-2 ring-offset-background;
-  }
-
-  /* Surface Elevated */
-  .bg-surface-elevated {
-    background-color: hsl(var(--surface-elevated));
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }
 
@@ -117,15 +367,43 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--border));
-    border-radius: 4px;
+    border-radius: var(--radius-full);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground));
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+/* ===================
+   REDUCED MOTION
+   =================== */
+@media (prefers-reduced-motion: reduce) {
+  .btn-ghost,
+  .btn-ghost-sm,
+  .card-glass,
+  .input-ghost,
+  .input-ghost-rect {
+    transition: none;
+  }
+
+  .btn-ghost:active,
+  .btn-ghost-sm:active {
+    transform: none;
+  }
+}
+
+/* ===================
+   DESKTOP FONT SIZE ADJUSTMENTS
+   =================== */
+@media (min-width: 768px) {
+  .input-ghost,
+  .input-ghost-rect {
+    font-size: var(--text-sm);
   }
 }

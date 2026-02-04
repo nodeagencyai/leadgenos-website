@@ -1,12 +1,19 @@
-import AiCodeReviews from "./bento/ai-code-reviews"
-import RealtimeCodingPreviews from "./bento/real-time-previews"
-import OneClickIntegrationsIllustration from "./bento/one-click-integrations-illustration"
-import MCPConnectivityIllustration from "./bento/mcp-connectivity-illustration" // Updated import
-import EasyDeployment from "./bento/easy-deployment"
-import ParallelCodingAgents from "./bento/parallel-agents" // Updated import
+import React from "react"
+import AILeadEnrichment from "./bento/ai-lead-enrichment"
+import CampaignAnalytics from "./bento/campaign-analytics"
+import MultiChannelIntegrations from "./bento/multi-channel-integrations"
+import AutomationWorkflowStatus from "./bento/automation-workflow-status"
+import LeadScraperVisualizer from "./bento/lead-scraper-visualizer"
+import CostControlCenter from "./bento/cost-control-center"
 
-const BentoCard = ({ title, description, Component }) => (
-  <div className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative">
+interface BentoCardProps {
+  title: string
+  description: string
+  Component: React.FC
+}
+
+const BentoCard: React.FC<BentoCardProps> = ({ title, description, Component }) => (
+  <div className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative group hover:border-white/40 transition-colors duration-500">
     {/* Background with blur effect */}
     <div
       className="absolute inset-0 rounded-2xl"
@@ -27,7 +34,7 @@ const BentoCard = ({ title, description, Component }) => (
         </p>
       </div>
     </div>
-    <div className="self-stretch h-72 relative -mt-0.5 z-10">
+    <div className="self-stretch h-72 relative -mt-0.5 z-10 filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
       <Component />
     </div>
   </div>
@@ -36,34 +43,34 @@ const BentoCard = ({ title, description, Component }) => (
 export function BentoSection() {
   const cards = [
     {
-      title: "AI-powered code reviews.",
-      description: "Get real-time, smart suggestions for cleaner code.",
-      Component: AiCodeReviews,
+      title: "AI-Powered Enrichment",
+      description: "Generate personalized hooks and icebreakers automatically.",
+      Component: AILeadEnrichment,
     },
     {
-      title: "Real-time coding previews",
-      description: "Chat, collaborate, and instantly preview changes together.",
-      Component: RealtimeCodingPreviews,
+      title: "Real-Time Analytics",
+      description: "Track reply rates, meetings booked, and campaign ROI instantly.",
+      Component: CampaignAnalytics,
     },
     {
-      title: "One-click integrations",
-      description: "Easily connect your workflow with popular dev tools.",
-      Component: OneClickIntegrationsIllustration,
+      title: "Unified Integrations",
+      description: "Connect Instantly, HeyReach, and Apollo in one seamless workflow.",
+      Component: MultiChannelIntegrations,
     },
     {
-      title: "Flexible MCP connectivity",
-      description: "Effortlessly manage and configure MCP server access.",
-      Component: MCPConnectivityIllustration, // Updated component
+      title: "Smart Automations",
+      description: "Monitor scraping and enrichment jobs executing in the background.",
+      Component: AutomationWorkflowStatus,
     },
     {
-      title: "Launch parallel coding agents", // Swapped position
-      description: "Solve complex problems faster with multiple AI agents.",
-      Component: ParallelCodingAgents, // Updated component
+      title: "Multi-Source Scraping",
+      description: "Aggregate high-quality leads from LinkedIn and Apollo simultaneously.",
+      Component: LeadScraperVisualizer,
     },
     {
-      title: "Deployment made easy", // Swapped position
-      description: "Go from code to live deployment on Vercel instantly.",
-      Component: EasyDeployment,
+      title: "Cost & Budget Control",
+      description: "Track OpenRouter spend and manage campaign budgets in real-time.",
+      Component: CostControlCenter,
     },
   ]
 
