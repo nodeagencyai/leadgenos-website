@@ -8,32 +8,37 @@ const faqData = [
   {
     question: "What is LeadGenOS and who is it for?",
     answer:
-      "LeadGenOS is an all-in-one lead generation platform for SDRs, sales teams, and agencies who want to automate prospecting. It combines multi-source scraping, AI-powered enrichment, and multi-channel outreach in a single dashboard—eliminating the need to juggle multiple tools.",
+      "LeadGenOS is a done-for-you outbound system that handles everything from scraping to sending. We set up your entire lead generation infrastructure so you don't have to juggle Apollo, Clay, ChatGPT, Instantly, and spreadsheets. We build the campaigns, configure the integrations, and hand you a working system. It's built for sales teams tired of manual prospecting, agencies running outbound for multiple clients, and founders who want an SDR's output without the headcount. We handle the technical setup and configuration. You handle closing deals.",
   },
   {
     question: "Which platforms can I scrape leads from?",
     answer:
-      "We support LinkedIn (profiles, Sales Navigator, and job postings), Apollo.io, and manual CSV imports. Our N8N integration also enables custom data sources for advanced users.",
+      "We scrape from Apollo, LinkedIn, Sales Navigator, Twitter/X, and any custom source you need. Unlike tools that lock you into one platform, we pull leads from wherever your ideal customers live. Apollo gives you verified B2B emails and company data. LinkedIn and Sales Navigator give you decision-makers with advanced filters. Twitter/X provides intent signals and real-time engagement data. Need something custom? Upload CSVs, connect your CRM, or integrate proprietary databases. We dedupe across all sources and merge the best data into one enriched profile per lead.",
   },
   {
     question: "How does AI-powered enrichment work?",
     answer:
-      "We use GPT-4 and Claude via OpenRouter to generate personalized icebreakers and hooks based on each lead's profile, job title, and company data—automatically, at scale. This helps your outreach stand out and improves reply rates.",
+      "We enrich every lead with 50+ datapoints, then use AI to turn that research into personalized copy. First, we research each lead for recent company news, LinkedIn activity, tech stack, funding rounds, hiring signals, and competitor mentions. Then AI analyzes the data to identify the most relevant talking points for your offer. Finally, we generate personalized emails where every message references real context, not generic templates. The result is emails that feel hand-written at scale. Most clients see 2-3x higher reply rates compared to basic mail merge.",
   },
   {
     question: "What outreach tools do you integrate with?",
     answer:
-      "LeadGenOS connects natively with Instantly.ai for email campaigns and HeyReach for LinkedIn automation. Your enriched leads flow directly into your campaigns with one click.",
+      "We connect to Instantly.ai for email and HeyReach for LinkedIn so you keep using the tools that work. LeadGenOS is the command center where we build your campaigns with scraping, research, and AI copy. Then we push them to Instantly for email sequences and HeyReach for LinkedIn outreach. You track all performance in one unified dashboard. Already using these tools? Perfect. We plug right in and your existing campaigns, domains, and deliverability setup stay intact. Don't have them yet? We'll help you set them up as part of onboarding.",
   },
   {
     question: "How do you handle data privacy and compliance?",
     answer:
-      "We follow industry best practices for data security. Your lead data is stored in a private Supabase database with encrypted connections. We don't share or sell your data, and we support GDPR-compliant workflows.",
+      "Your data lives in your own private database. Encrypted, compliant, and never shared. We set up a private Supabase instance so your data isn't mixed with other clients. Everything is encrypted at rest and in transit, and we follow strict GDPR and CCPA data handling protocols. You own everything and can export or delete your data anytime. We never sell your lead data to third parties, use your campaigns to train AI models, or store credit card info (payments go through Stripe). Think of it like your own private sales intelligence database that we configure and manage for you.",
   },
   {
     question: "Can I track my spending on AI and API usage?",
     answer:
-      "Yes! Our Cost Control Center shows real-time OpenRouter spend, token usage, and configurable budget alerts—so you never overspend on AI personalization. You'll always know exactly where your money is going.",
+      "Yes, and you'll never get surprised by a $500 AI bill again. Our cost tracking dashboard shows you exactly what you're spending across AI credits for GPT-5 and Claude enrichment, Instantly.ai email sends, HeyReach LinkedIn credits, Apollo API calls, and any other integrated tools. You can set daily and monthly spending caps, get alerts before you hit limits, see cost-per-lead and cost-per-reply and cost-per-meeting metrics, and pause campaigns automatically if budget is exceeded.",
+  },
+  {
+    question: "How is this different from just using Apollo or Clay?",
+    answer:
+      "Apollo gives you data. Clay gives you workflows. We give you deployed campaigns. Apollo finds contact info but you still have to export it, enrich it elsewhere, write emails, and send manually. Clay enriches and organizes data but you still have to write copy, set up sending tools, and manage campaigns yourself. LeadGenOS scrapes, enriches, writes, and sends. All configured and ready to run. We're not a tool you have to learn, we're a team that builds your outbound system for you.",
   },
 ]
 
@@ -63,7 +68,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         </div>
       </div>
       <div
-        className={`overflow-hidden transition-all duration-500 ease-out ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`overflow-hidden transition-all duration-500 ease-out ${isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"}`}
         style={{
           transitionProperty: "max-height, opacity, padding",
           transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
@@ -96,10 +101,10 @@ export function FAQSection() {
       <div className="self-stretch pt-8 pb-8 md:pt-14 md:pb-14 flex flex-col justify-center items-center gap-2 relative z-10">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="w-full max-w-[435px] text-center text-foreground text-4xl font-semibold leading-10 break-words">
-            Frequently Asked Questions
+            Questions? We've Got Answers.
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
-            Everything you need to know about LeadGenOS and how it supercharges your outbound.
+            The most common questions from sales leaders just like you.
           </p>
         </div>
       </div>

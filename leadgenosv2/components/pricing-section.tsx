@@ -1,63 +1,59 @@
 "use client"
 
-import { useState } from "react"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function PricingSection() {
-  const [isAnnual, setIsAnnual] = useState(true)
-
   const pricingPlans = [
     {
       name: "Starter",
-      monthlyPrice: "$0",
-      annualPrice: "$0",
-      description: "Perfect for testing the waters.",
+      description: "For solo founders testing outbound.",
       features: [
-        "500 leads/month",
+        "Single platform scraping",
         "Basic AI enrichment",
-        "1 active campaign",
         "Instantly.ai integration",
         "Lead database with export",
+        "1 email sequence setup",
+        "Dashboard access",
+        "Email support",
       ],
-      buttonText: "Get Started",
+      buttonText: "Book a Call",
       buttonClass:
         "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
     {
       name: "Growth",
-      monthlyPrice: "$59",
-      annualPrice: "$49",
-      description: "For growing sales teams.",
+      description: "For teams ready to scale outreach.",
       features: [
-        "5,000 leads/month",
-        "Advanced AI personalization (GPT-4/Claude)",
+        "Multi-platform scraping",
+        "Full AI personalization",
         "Unlimited campaigns",
         "HeyReach + Instantly integrations",
         "Real-time analytics dashboard",
-        "CSV/JSON export",
-        "Priority support",
+        "Weekly optimization calls",
+        "Priority support + Slack",
+        "A/B testing included",
       ],
-      buttonText: "Start Free Trial",
+      buttonText: "Book a Call",
       buttonClass:
         "bg-primary-foreground shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-primary text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-primary-foreground/90",
       popular: true,
     },
     {
       name: "Scale",
-      monthlyPrice: "$249",
-      annualPrice: "$199",
-      description: "For agencies and enterprises.",
+      description: "For agencies and high-volume teams.",
       features: [
-        "Unlimited leads",
+        "All platforms + custom sources",
         "Priority AI processing",
-        "N8N automation workflows",
+        "Custom integrations",
         "Cost tracking dashboard",
         "Multi-user access",
-        "Dedicated support",
-        "Custom integrations",
+        "Dedicated account manager",
+        "White-label ready",
+        "Onboarding for your team",
+        "SLA guarantee",
       ],
-      buttonText: "Talk to Sales",
+      buttonText: "Book a Call",
       buttonClass:
         "bg-secondary shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-secondary-foreground text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-secondary/90",
     },
@@ -68,38 +64,14 @@ export function PricingSection() {
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
-            Pricing That Scales With Your Pipeline
+            Built For You. Tailored To Your Goals.
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            From solo SDRs to growing sales teams—pick the plan that matches your outreach volume.
+            Custom implementation based on your outreach volume and tech stack. Let's talk.
           </p>
         </div>
-        <div className="pt-4">
-          <div className="p-0.5 bg-muted rounded-lg outline outline-1 outline-[#0307120a] outline-offset-[-1px] flex justify-start items-center gap-1 md:mt-0">
-            <button
-              onClick={() => setIsAnnual(true)}
-              className={`pl-2 pr-1 py-1 flex justify-start items-start gap-2 rounded-md ${isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""}`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${isAnnual ? "text-accent-foreground" : "text-zinc-400"}`}
-              >
-                Annually
-              </span>
-            </button>
-            <button
-              onClick={() => setIsAnnual(false)}
-              className={`px-2 py-1 flex justify-start items-start rounded-md ${!isAnnual ? "bg-accent shadow-[0px_1px_1px_-0.5px_rgba(0,0,0,0.08)]" : ""}`}
-            >
-              <span
-                className={`text-center text-sm font-medium leading-tight ${!isAnnual ? "text-accent-foreground" : "text-zinc-400"}`}
-              >
-                Monthly
-              </span>
-            </button>
-          </div>
-        </div>
       </div>
-      <div className="self-stretch px-5 flex flex-col md:flex-row justify-start items-start gap-4 md:gap-6 mt-6 max-w-[1100px] mx-auto">
+      <div className="self-stretch px-5 flex flex-col md:flex-row justify-start items-start gap-4 md:gap-6 mt-10 max-w-[1100px] mx-auto">
         {pricingPlans.map((plan) => (
           <div
             key={plan.name}
@@ -107,78 +79,38 @@ export function PricingSection() {
             style={plan.popular ? {} : { outline: "1px solid hsl(var(--border))", outlineOffset: "-1px" }}
           >
             <div className="self-stretch flex flex-col justify-start items-start gap-6">
-              <div className="self-stretch flex flex-col justify-start items-start gap-8">
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
                 <div
-                  className={`w-full h-5 text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground" : "text-zinc-200"}`}
+                  className={`w-full text-lg font-semibold leading-tight ${plan.popular ? "text-primary-foreground" : "text-zinc-200"}`}
                 >
                   {plan.name}
                   {plan.popular && (
-                    <div className="ml-2 px-2 overflow-hidden rounded-full justify-center items-center gap-2.5 inline-flex mt-0 py-0.5 bg-gradient-to-b from-primary-light/50 to-primary-light bg-white">
-                      <div className="text-center text-primary-foreground text-xs font-normal leading-tight break-words">
+                    <span className="ml-2 px-2 overflow-hidden rounded-full justify-center items-center gap-2.5 inline-flex py-0.5 bg-gradient-to-b from-primary-light/50 to-primary-light bg-white">
+                      <span className="text-center text-primary-foreground text-xs font-normal leading-tight break-words">
                         Popular
-                      </div>
-                    </div>
+                      </span>
+                    </span>
                   )}
                 </div>
-                <div className="self-stretch flex flex-col justify-start items-start gap-1">
-                  <div className="flex justify-start items-center gap-1.5">
-                    <div
-                      className={`relative h-10 flex items-center text-3xl font-medium leading-10 ${plan.popular ? "text-primary-foreground" : "text-zinc-50"}`}
-                    >
-                      <span className="invisible">{isAnnual ? plan.annualPrice : plan.monthlyPrice}</span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: isAnnual ? 1 : 0,
-                          transform: `scale(${isAnnual ? 1 : 0.8})`,
-                          filter: `blur(${isAnnual ? 0 : 4}px)`,
-                        }}
-                        aria-hidden={!isAnnual}
-                      >
-                        {plan.annualPrice}
-                      </span>
-                      <span
-                        className="absolute inset-0 flex items-center transition-all duration-500"
-                        style={{
-                          opacity: !isAnnual ? 1 : 0,
-                          transform: `scale(${!isAnnual ? 1 : 0.8})`,
-                          filter: `blur(${!isAnnual ? 0 : 4}px)`,
-                        }}
-                        aria-hidden={isAnnual}
-                      >
-                        {plan.monthlyPrice}
-                      </span>
-                    </div>
-                    <div
-                      className={`text-center text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"}`}
-                    >
-                      /month
-                    </div>
-                  </div>
-                  <div
-                    className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"}`}
-                  >
-                    {plan.description}
-                  </div>
+                <div
+                  className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-zinc-400"}`}
+                >
+                  {plan.description}
                 </div>
               </div>
               <Button
                 className={`self-stretch px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}
               >
-                <div className="px-1.5 flex justify-center items-center gap-2">
-                  <span
-                    className={`text-center text-sm font-medium leading-tight ${plan.name === "Free" ? "text-gray-800" : plan.name === "Pro" ? "text-primary" : "text-zinc-950"}`}
-                  >
-                    {plan.buttonText}
-                  </span>
-                </div>
+                <span className="text-center text-sm font-medium leading-tight">
+                  {plan.buttonText}
+                </span>
               </Button>
             </div>
             <div className="self-stretch flex flex-col justify-start items-start gap-4">
               <div
                 className={`self-stretch text-sm font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-muted-foreground"}`}
               >
-                {plan.name === "Free" ? "Get Started today:" : "Everything in Free +"}
+                What's included:
               </div>
               <div className="self-stretch flex flex-col justify-start items-start gap-3">
                 {plan.features.map((feature) => (

@@ -437,20 +437,28 @@ export function HeroSection() {
         <Header />
       </div>
 
-      <div className="relative z-10 space-y-4 md:space-y-5 lg:space-y-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[500px] lg:max-w-[588px] mt-16 md:mt-[120px] lg:mt-[160px] px-4">
-        <h1 className="text-foreground text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight">
-          Your Outbound Engine, Fully Automated
+      <div className="relative z-10 space-y-4 md:space-y-5 lg:space-y-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[600px] lg:max-w-[800px] mt-16 md:mt-[120px] lg:mt-[160px] px-4">
+        <h1 className="text-foreground text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+          The Complete AI Outbound Platform.
+          <span className="block text-muted-foreground mt-2">Find. Research. Write. Send. Close.</span>
         </h1>
-        <p className="text-muted-foreground text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mx-auto">
-          Scrape leads from LinkedIn and Apollo, enrich with AI-powered personalization, and launch multi-channel campaigns—all from one dashboard.
+        <p className="text-muted-foreground text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+          One platform that scrapes from Apollo, LinkedIn, Sales Navigator, and Twitter simultaneously. Then does the heavy lifting: researching each lead, personalizing every message, and deploying multi-channel campaigns.
         </p>
       </div>
 
-      <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer">
-        <Button className="relative z-10 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
-          Start Free Trial
-        </Button>
-      </Link>
+      <div className="relative z-10 flex flex-col sm:flex-row gap-3">
+        <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer">
+          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
+            Book a Demo
+          </Button>
+        </Link>
+        <Link href="#features-section">
+          <Button variant="outline" className="px-8 py-3 rounded-full font-medium text-base border-white/20 hover:bg-white/10">
+            See How It Works
+          </Button>
+        </Link>
+      </div>
     </section>
   )
 }

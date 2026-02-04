@@ -63,13 +63,13 @@ export function BentoSection() {
       Component: AutomationWorkflowStatus,
     },
     {
-      title: "Multi-Source Scraping",
-      description: "Aggregate high-quality leads from LinkedIn and Apollo simultaneously.",
+      title: "Scrape Without Getting Blocked",
+      description: "Residential proxies + human-like behavior = zero detection. Unlimited scale, stealth mode.",
       Component: LeadScraperVisualizer,
     },
     {
-      title: "Cost & Budget Control",
-      description: "Track OpenRouter spend and manage campaign budgets in real-time.",
+      title: "Know What You're Spending",
+      description: "Real-time cost tracking with budget alerts. AI credits, sending costs—all in one place.",
       Component: CostControlCenter,
     },
   ]
@@ -81,11 +81,10 @@ export function BentoSection() {
         <div className="self-stretch py-8 md:py-14 flex flex-col justify-center items-center gap-2 z-10">
           <div className="flex flex-col justify-start items-center gap-4">
             <h2 className="w-full max-w-[655px] text-center text-foreground text-4xl md:text-6xl font-semibold leading-tight md:leading-[66px]">
-              Empower Your Workflow with AI
+              Everything You Need to Crush Your Quota
             </h2>
-            <p className="w-full max-w-[600px] text-center text-muted-foreground text-lg md:text-xl font-medium leading-relaxed">
-              Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to
-              streamline your operations.
+            <p className="w-full max-w-[700px] text-center text-muted-foreground text-lg md:text-xl font-medium leading-relaxed">
+              We handle prospecting to personalization. You handle closing deals.
             </p>
           </div>
         </div>

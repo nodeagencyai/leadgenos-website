@@ -103,11 +103,11 @@ export function CTASection() {
       </div>
       <div className="relative z-10 flex flex-col justify-start items-center gap-9 max-w-4xl mx-auto">
         <div className="flex flex-col justify-start items-center gap-4 text-center">
-          <h2 className="text-foreground text-4xl md:text-5xl lg:text-[68px] font-semibold leading-tight md:leading-tight lg:leading-[76px] break-words max-w-[435px]">
+          <h2 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight md:leading-tight lg:leading-[76px] break-words max-w-4xl">
             Ready to Fill Your Pipeline?
           </h2>
           <p className="text-muted-foreground text-sm md:text-base font-medium leading-[18.20px] md:leading-relaxed break-words max-w-2xl">
-            Join hundreds of sales teams using LeadGenOS to book more meetings and close more deals.
+            Book a call to see how we can 3x your outbound in 30 days.
           </p>
         </div>
         <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer">
@@ -115,7 +115,7 @@ export function CTASection() {
             className="px-[30px] py-2 bg-secondary text-secondary-foreground text-base font-medium leading-6 rounded-[99px] shadow-[0px_0px_0px_4px_rgba(255,255,255,0.13)] hover:bg-secondary/90 transition-all duration-200"
             size="lg"
           >
-            Start Free Trial
+            Book Your Demo
           </Button>
         </Link>
       </div>
