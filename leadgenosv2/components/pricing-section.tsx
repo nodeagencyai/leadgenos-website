@@ -9,51 +9,53 @@ export function PricingSection() {
 
   const pricingPlans = [
     {
-      name: "Free",
+      name: "Starter",
       monthlyPrice: "$0",
       annualPrice: "$0",
-      description: "Perfect for individuals starting their journey.",
+      description: "Perfect for testing the waters.",
       features: [
-        "Real-time code suggestions",
-        "Basic integration logos",
-        "Single MCP server connection",
-        "Up to 2 AI coding agents",
-        "Vercel deployments with Pointer branding",
+        "500 leads/month",
+        "Basic AI enrichment",
+        "1 active campaign",
+        "Instantly.ai integration",
+        "Lead database with export",
       ],
       buttonText: "Get Started",
       buttonClass:
         "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-gray-800 text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
     },
     {
-      name: "Pro",
-      monthlyPrice: "$20",
-      annualPrice: "$16",
-      description: "Ideal for professionals.",
+      name: "Growth",
+      monthlyPrice: "$59",
+      annualPrice: "$49",
+      description: "For growing sales teams.",
       features: [
-        "Enhanced real-time previews",
-        "Unlimited integrations with custom logos",
-        "Multiple MCP server connections",
-        "Up to 10 concurrent AI coding agents",
-        "Collaborative coding with team chat",
-        "Advanced version control integrations",
-        "Priority email and chat support",
+        "5,000 leads/month",
+        "Advanced AI personalization (GPT-4/Claude)",
+        "Unlimited campaigns",
+        "HeyReach + Instantly integrations",
+        "Real-time analytics dashboard",
+        "CSV/JSON export",
+        "Priority support",
       ],
-      buttonText: "Join now",
+      buttonText: "Start Free Trial",
       buttonClass:
         "bg-primary-foreground shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] text-primary text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-primary-foreground/90",
       popular: true,
     },
     {
-      name: "Ultra",
-      monthlyPrice: "$200",
-      annualPrice: "$160",
-      description: "Tailored solutions for teams.",
+      name: "Scale",
+      monthlyPrice: "$249",
+      annualPrice: "$199",
+      description: "For agencies and enterprises.",
       features: [
-        "Dedicated account support",
-        "Unlimited MCP server clusters",
-        "Unlimited AI coding agents",
-        "Enterprise-grade security and compliance",
-        "Priority deployments and SLA guarantees",
+        "Unlimited leads",
+        "Priority AI processing",
+        "N8N automation workflows",
+        "Cost tracking dashboard",
+        "Multi-user access",
+        "Dedicated support",
+        "Custom integrations",
       ],
       buttonText: "Talk to Sales",
       buttonClass:
@@ -66,11 +68,10 @@ export function PricingSection() {
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
-            Pricing built for every developer
+            Pricing That Scales With Your Pipeline
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            Choose a plan that fits your coding workflow, from individuals starting out to <br /> growing professionals
-            and large organizations.
+            From solo SDRs to growing sales teams—pick the plan that matches your outreach volume.
           </p>
         </div>
         <div className="pt-4">

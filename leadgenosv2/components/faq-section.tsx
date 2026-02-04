@@ -6,34 +6,34 @@ import { ChevronDown } from "lucide-react"
 
 const faqData = [
   {
-    question: "What is Pointer and who is it for?",
+    question: "What is LeadGenOS and who is it for?",
     answer:
-      "Pointer is an AI-powered development platform designed for developers, teams, and organizations who want toaccelerate their coding workflow. It's perfect for both individual developers looking to enhance their productivity and teams seeking seamless collaboration tools.",
+      "LeadGenOS is an all-in-one lead generation platform for SDRs, sales teams, and agencies who want to automate prospecting. It combines multi-source scraping, AI-powered enrichment, and multi-channel outreach in a single dashboard—eliminating the need to juggle multiple tools.",
   },
   {
-    question: "How does Pointer's AI code review work?",
+    question: "Which platforms can I scrape leads from?",
     answer:
-      "Our AI analyzes your code in real-time, providing intelligent suggestions for improvements, catching potential bugs, and ensuring best practices. It learns from your coding patterns and adapts to your team's standards, making code reviews faster and more consistent.",
+      "We support LinkedIn (profiles, Sales Navigator, and job postings), Apollo.io, and manual CSV imports. Our N8N integration also enables custom data sources for advanced users.",
   },
   {
-    question: "Can I integrate Pointer with my existing tools?",
+    question: "How does AI-powered enrichment work?",
     answer:
-      "Yes! Pointer offers one-click integrations with popular development tools including GitHub, GitLab, VS Code, Slack, and many more. Our MCP connectivity allows you to easily manage and configure server access across your entire development stack.",
+      "We use GPT-4 and Claude via OpenRouter to generate personalized icebreakers and hooks based on each lead's profile, job title, and company data—automatically, at scale. This helps your outreach stand out and improves reply rates.",
   },
   {
-    question: "What's included in the free plan?",
+    question: "What outreach tools do you integrate with?",
     answer:
-      "The free plan includes real-time code suggestions, basic integrations, single MCP server connection, up to 2 AI coding agents, and Vercel deployments with Pointer branding. It's perfect for individual developers getting started.",
+      "LeadGenOS connects natively with Instantly.ai for email campaigns and HeyReach for LinkedIn automation. Your enriched leads flow directly into your campaigns with one click.",
   },
   {
-    question: "How do parallel coding agents work?",
+    question: "How do you handle data privacy and compliance?",
     answer:
-      "Our parallel coding agents can work on different parts of your codebase simultaneously, solving complex problems faster than traditional single-threaded approaches. You can launch multiple agents to handle different tasks like bug fixes, feature development, and code optimization concurrently.",
+      "We follow industry best practices for data security. Your lead data is stored in a private Supabase database with encrypted connections. We don't share or sell your data, and we support GDPR-compliant workflows.",
   },
   {
-    question: "Is my code secure with Pointer?",
+    question: "Can I track my spending on AI and API usage?",
     answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, secure data transmission, and compliance with industry standards. Your code never leaves your secure environment without your explicit permission, and we offer on-premises deployment options for enterprise customers.",
+      "Yes! Our Cost Control Center shows real-time OpenRouter spend, token usage, and configurable budget alerts—so you never overspend on AI personalization. You'll always know exactly where your money is going.",
   },
 ]
 
@@ -99,7 +99,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
-            Everything you need to know about Pointer and how it can transform your development workflow
+            Everything you need to know about LeadGenOS and how it supercharges your outbound.
           </p>
         </div>
       </div>

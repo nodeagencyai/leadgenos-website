@@ -8,9 +8,9 @@ export function FooterSection() {
       {/* Left Section: Logo, Description, Social Links */}
       <div className="flex flex-col justify-start items-start gap-8 p-4 md:p-8">
         <div className="flex gap-3 items-stretch justify-center">
-          <div className="text-center text-foreground text-xl font-semibold leading-4">Pointer</div>
+          <div className="text-center text-foreground text-xl font-semibold leading-4">LeadGenOS</div>
         </div>
-        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Coding made effortless</p>
+        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Your outbound engine, fully automated</p>
         <div className="flex justify-start items-start gap-3">
           <a href="#" aria-label="Twitter" className="w-4 h-4 flex items-center justify-center">
             <Twitter className="w-full h-full text-muted-foreground" />
@@ -38,10 +38,10 @@ export function FooterSection() {
               Integrations
             </a>
             <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Real-time Previews
+              Lead Scraping
             </a>
             <a href="#" className="text-foreground text-sm font-normal leading-5 hover:underline">
-              Multi-Agent Coding
+              AI Enrichment
             </a>
           </div>
         </div>
