@@ -19,7 +19,7 @@ export function PricingSection() {
       ],
       buttonText: "Book a Call",
       buttonClass:
-        "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] text-black text-shadow-[0px_1px_1px_rgba(16,24,40,0.08)] hover:bg-zinc-400",
+        "bg-zinc-300 shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] outline outline-0.5 outline-[#1e29391f] outline-offset-[-0.5px] !text-black hover:bg-zinc-400",
     },
     {
       name: "Growth",
