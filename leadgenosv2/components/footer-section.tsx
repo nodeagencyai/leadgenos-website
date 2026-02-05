@@ -51,35 +51,25 @@ const NavLinks = () => (
 
 export function FooterSection() {
   return (
-    <footer className="w-full border-t border-border/40 py-14 bg-background">
-      <div className="max-w-[1320px] mx-auto px-5 grid grid-cols-1 md:grid-cols-12 gap-10">
-        <div className="md:col-span-6 flex flex-col items-start gap-4">
+    <footer className="w-full py-10 bg-background">
+      <div className="max-w-[1320px] mx-auto px-5">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 p-6 rounded-2xl bg-secondary/5 border border-border/10">
+          {/* Left: Logo */}
           <Logo />
-          <p className="text-muted-foreground text-sm max-w-xs">
-            Scale your outbound without scaling your headcount.
-          </p>
-          <div className="pt-2">
-            <SocialLinks />
-          </div>
-        </div>
 
-        <div className="md:col-span-3">
-          <h4 className="font-semibold text-foreground mb-4">Product</h4>
-          <nav className="flex flex-col gap-3">
+          {/* Middle: Navigation */}
+          <nav className="flex items-center gap-6">
             <NavLinks />
           </nav>
+
+          {/* Right: Socials */}
+          <SocialLinks />
         </div>
 
-        <div className="md:col-span-3">
-          <h4 className="font-semibold text-foreground mb-4">Legal</h4>
-          <nav className="flex flex-col gap-3">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>
-          </nav>
+        {/* Bottom: Copyright */}
+        <div className="mt-8 text-center">
+          <p className="text-muted-foreground text-xs">© 2026 Node AI. All rights reserved.</p>
         </div>
-      </div>
-      <div className="max-w-[1320px] mx-auto px-5 mt-12 pt-8 border-t border-border/20 text-center">
-        <p className="text-muted-foreground text-xs">© 2026 Node AI. All rights reserved.</p>
       </div>
     </footer>
   )
