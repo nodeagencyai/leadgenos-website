@@ -78,8 +78,8 @@ export function FooterSection() {
           </nav>
         </div>
       </div>
-      <div className="max-w-[1320px] mx-auto px-5 mt-12 pt-8 border-t border-border/20 text-center md:text-left">
-        <p className="text-muted-foreground text-xs">© 2025 Node Agency. All rights reserved.</p>
+      <div className="max-w-[1320px] mx-auto px-5 mt-12 pt-8 border-t border-border/20 text-center">
+        <p className="text-muted-foreground text-xs">© 2026 Node AI. All rights reserved.</p>
       </div>
     </footer>
   )
